@@ -55,6 +55,7 @@ Generated using https://codepen.io/stephenpaton-tech/full/JjRvGmY
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 *::-webkit-scrollbar-track {
@@ -146,7 +147,7 @@ footer {
   min-width: 768px;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: row wrap;
   background-color: var(--earthy-brown);
   box-shadow: var(--heros-blue) 0px 5px 5px;
 }
@@ -235,11 +236,8 @@ footer {
   padding: 0 var(--default-padding);
   list-style: none;
   display: inline-flex;
-  flex-flow: row wrap;
-  margin-left: 0;
+  flex-flow: row nowrap;
   height: 3rem;
-  overflow-x: auto;
-  overflow-y: hidden;
 }
 
 .navlist > li > a,
@@ -289,37 +287,31 @@ footer {
   overflow-y: hidden;
 }
 .gallery > .cards > img {
-  width: 250px;
-  height: 150px;
-  margin-left: 0px;
-  transform: rotateY(16deg);
-  transform: translateY(16px);
+  max-width: 250px;
+  max-height: 150px;
+  transition: all 0.3s;
+  transition-delay: 0.1s;
+  /* position: absolute; */
+  box-shadow: -black 0 0 16px ;
+  transform: rotateX(25deg);
   border-radius: 16px;
 }
 .gallery > .cards > img:hover {
-  box-shadow: var(--heros-blue) 0 0 10px;
   z-index: 99;
-  transition: all 0.3s;
-  transform: rotateY(16deg);
-  transform: translateY(16px);
+  transform: translateY(-32px);
 }
-.gallery > .cards > img:hover ~ img {
-  box-shadow: var(--heros-blue) 0 0 10px;
-  z-index: 99;
-  transition: all 0.3s;
-  transform: rotateY(16deg);
+.gallery > .cards > img:hover~img {
+  z-index: 100;
   transform: translateX(16px);
 }
 .gallery > .cards > img:active {
-  box-shadow: var(--heros-blue) 0 0 10px;
   z-index: 199;
-  transition: all 0.3s;
-  transition-delay: 0.1s;
   position: absolute;
   display: unset;
-  margin: -20px 0 0 0;
-  min-width: 80%;
-  min-height: 720px;
+  margin: 5% 0 0 0;
+  min-width: 60%;
+  max-width: 70%;
+  max-height: 80vh;
 }
 .store {
   display: flex;
