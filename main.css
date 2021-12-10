@@ -39,11 +39,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 16pt;
-  font-family: "dialogueFont", sans-serif;
-  font-style: normal;
-  font-weight: 600;
   color: var(--earthy-brown);
+  font-size: 14px;
 }
 
 /* ===== Scrollbar CSS ===== 
@@ -74,6 +71,9 @@ body {
   height: 100%;
   overflow-x: hidden;
   background-color: var(--earthy-brown);
+  font-family: "dialogueFont", sans-serif;
+  font-style: normal;
+  font-weight: 600;
 }
 
 body:after {
@@ -107,10 +107,10 @@ li {
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 32px;
 }
 h3 {
-  font-size: 32px;
+  font-size: 24px;
 }
 
 a {
@@ -141,8 +141,9 @@ footer {
   position: fixed;
   height: 2rem;
   z-index: 10;
-  padding: 16px;
+  padding: 2rem;
   justify-content: center;
+  min-width: 768px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -157,6 +158,8 @@ footer {
   display: inline-flex;
   flex-flow: column-reverse wrap;
   font-family: "HyliaSerif";
+  align-self: center;
+  font-size: 32px;
 }
 
 .mid {
@@ -183,15 +186,15 @@ footer {
 }
 
 .mid > div.page {
-  padding: var(--default-padding);
-  background-color: var(--dark-color);
-  color: var(--earthy-brown);
-  z-index: 10;
   max-width: 960px;
   min-height: 720px;
+  padding: var(--default-padding);
+  margin: 5rem auto;
+  background-color: var(--dark-color);
+  color: var(--earthy-brown);
+  z-index: 1000000;
   border-radius: 16px;
   box-shadow: var(--dark-color) 0 0 2rempx;
-  margin: 5rem auto;
 }
 .page > *,
 .page > ul > li {
@@ -223,7 +226,7 @@ footer {
 }
 .symbols {
   font-family: "SheilkSlateSymbology";
-  font-size: xx-large;
+  font-size: large;
   font-weight: 100;
   text-shadow: lightblue 0px 0px 0.333rem;
   color: var(--heros-blue);
@@ -232,7 +235,11 @@ footer {
   padding: 0 var(--default-padding);
   list-style: none;
   display: inline-flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  margin-left: 0;
+  height: 3rem;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .navlist > li > a,
@@ -242,7 +249,6 @@ footer {
   text-decoration: none;
   color: var(--triforce-gold);
   font-family: "HyliaSerif";
-  font-size: 1.5rem;
   background-color: var(--earthy-brown);
   flex-direction: row-reverse;
 }
@@ -410,8 +416,8 @@ footer {
   justify-self: center;
   line-height: 32px;
   border-radius: 16px;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: 2px;
   text-shadow: none;
   transition: all 0.3s;
   transition-delay: 0.1s;
@@ -427,7 +433,6 @@ footer {
 
 .price {
   font-family: "Triforce";
-  font-size: calc(var(--default-padding) / 1.5);
   color: greenyellow;
   text-shadow: none;
 }
