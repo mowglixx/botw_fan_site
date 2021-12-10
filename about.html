@@ -14,7 +14,7 @@
         <h2>The Legend of Zelda</h2>
 
         <ul class="navlist">
-          <li><a href="index.html"><span class="icon triforce"></span> Home</a></li>
+          <li><a href="index.html"><span class="icon sheilkah"></span> Home</a></li>
           <li><a href="gallery.html"><span class="icon triforce"></span> Gallery</a></li>
           <li><a href="store.html"><span class="icon triforce"></span> Store</a></li>
           <li><a class="active" href="about.html"><span class="icon triforce"></span> About Dev</a></li>
@@ -23,6 +23,19 @@
       <div class="mid">
         <iframe frameborder="0" width="110%" height="110%" src="https://youtube.com/embed/fFTw5g35C2Q?controls=0&autoplay=1&showinfo=0"></iframe>
         <div class="page">
+          <h2>About this site</h2>
+<p>This website was developed as a proof of knowledge after 2 weeks of CodeNation training.</p>
+<p>The site is a demo of what can be achieved without JavaScript and all styles including aesthetic icons have been created using custom fonts and CSS3 Features, one such feature is the <code>:after</code> pseudo element</p>
+<h2>Triforce Icons in nav</h2>
+<pre>.triforce {
+  font-family: "Triforce";
+  color: var(--triforce-gold);
+  }
+.triforce:after {
+  content: "*";
+  }
+</pre>
+<p>This approach made the site more accessible to screen readers by not having unnecessary characters on the screen similar to the way FontAwesome provides their fonts, each .icon has a defining style with the icon color and font and the :after defines the symbol being used to conjure up the icon from the selected font without adding characters to the HTML.</p>
           <h2>About Dan Monaghan</h2>
           <h3>Open your eyes</h3>
           <h3>My Time at Code nation</h3>
